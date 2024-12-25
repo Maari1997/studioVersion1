@@ -1,0 +1,12 @@
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it stays above other content */
+    background-color: white; /* Adjust the background color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for separation */
+  }
+  .content {
+    margin-top: 140px; /* Adjust to match header and navbar height */
+  }

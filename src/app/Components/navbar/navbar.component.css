@@ -1,0 +1,194 @@
+/* .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin: 0 1.5rem;
+  
+    .navbar-left {
+      display: flex;
+      gap: 15px;
+           
+      button {
+        color: black;
+        font-size: 1rem;
+        font-weight: 500;
+        text-transform: capitalize;
+  
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.2);
+        }
+      }
+    }
+  
+    .navbar-right {
+      .sign-in-btn {
+        background-color: #ff5722;
+        color: #fff;
+        font-weight: bold;
+  
+        &:hover {
+          background-color: #e64a19;
+        }
+      }
+    }
+  }
+   */
+
+   .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin: 0 1.5rem;
+  
+    .navbar-container {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+    .navbar-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 25%;
+    }
+  
+    .navbar-left,
+    .navbar-right {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+  
+    button {
+      color: black;
+      font-size: 1rem;
+      font-weight: 500;
+      text-transform: capitalize;
+      background: none;
+      border: none;
+      cursor: pointer;
+  
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 4px;
+      }
+    }
+  
+    .sign-in-btn {
+      background-color: #ff5722;
+      color: white;
+      font-weight: bold;
+      padding: 8px 16px;
+      border-radius: 4px;
+      width: 85px;
+  
+      &:hover {
+        background-color: #e64a19;
+      }
+    }
+  
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: black;
+    }
+  
+    .navbar-left button {
+      position: relative;
+      color: black;
+      font-size: 1rem;
+      font-weight: 500;
+      text-transform: capitalize;
+      background: none;
+      border: 2px solid transparent;
+      cursor: pointer;
+      padding: 10px 20px;
+      border-radius: 4px;
+      transition: all 0.3s ease-in-out;
+    }
+    
+    .navbar-left button::before {
+      content: '';
+      position: absolute;
+      bottom: 0; /* Position the underline at the bottom */
+      left: 0;
+      width: 0;
+      height: 3px; /* Line height for underline */
+      background-color: #ff5722; /* Underline color */
+      transition: width 0.3s, left 0.3s;
+    }
+    
+    .navbar-left button:hover {
+      color: #ff5722; /* Text color change */
+      transform: translateY(-3px); /* Subtle lift effect */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow on hover */
+    }
+    
+    .navbar-left button:hover::before {
+      width: 100%; /* Expand the underline to full width */
+      left: 0; /* Make sure it starts from the left edge */
+    }
+    
+    .navbar-left button:active {
+      transform: translateY(0); /* Reset the lift effect when clicked */
+    }
+    
+    
+    /* Mobile View */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+  
+      .navbar-content {
+        display: none; /* Hide navbar content by default in mobile */
+        flex-direction: row; /* Horizontal layout for mobile menu */
+        justify-content: center;
+        gap: 10px;
+        position: absolute;
+        top: 57px; /* Adjust based on your navbar height */
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+      }
+  
+      .navbar-content.mobile-menu-open {
+        display: flex; /* Show navbar content when mobile menu is open */
+        flex-direction: column;
+      }
+  
+      .navbar-left
+      {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      .navbar-left button,
+      .navbar-right .sign-in-btn {
+        width: auto; /* Maintain button sizes for horizontal layout */
+        text-align: center;
+        padding: 8px 12px;
+      }      
+    }
+  
+    /* Desktop View */
+    .navbar-content.desktop-menu {
+      display: flex !important; /* Always display navbar in desktop */
+    }
+    
+  }
+  

@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+/* Import Roboto Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Import Material Icons */
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+/* Set Global Font */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+   height: 100%;
+   scroll-behavior: smooth;
+   }
+
+
+.custom-carousel-container {
+  max-width: 100%;  /* Allow full width */
+  width: 100%;  /* Ensure full width */
+  padding: 0;  /* Remove any padding */
+  margin: 0 auto;  /* Center the container */
+}

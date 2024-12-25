@@ -1,0 +1,92 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    /* background-color: #0879e7; */
+    color:#0879e7;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #ff5722; /* Orange line under the header */
+  }
+   
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-img {
+    height: 70px;
+    margin-right: 25px;
+  }
+  
+  .logo-text {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .digital-text {
+    color: #135ce6; /* Orange color for "Digital" */  
+    text-transform: uppercase; /* Optional: make it uppercase */
+  }
+  
+  .studio-text {
+    color: #ff5722; /* White color for "Studio" */
+    font-style: italic; /* Optional: make it italic */
+    margin-left: 10px; /* Add spacing between the two words */
+  }
+  
+  .contact {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+  }
+  
+  .contact-item span{
+    color:black;
+   font-weight: 500;
+  }
+  
+  mat-icon {
+    font-size: 1rem;
+      background-color: #ffbcbc;
+      padding: 4px;
+      border-radius: 50px;
+      color: orangered;
+  }
+  
+  @media(max-width:768px){
+    .contact{
+      display: flex;
+      gap: 10px;
+      flex-direction: column;
+    }
+
+    .mat-icon{
+      font-size: 0.75rem;
+    background-color: #ffbcbc;
+    padding: 6px;
+    border-radius: 50px;
+    color: orangered;
+
+    }
+
+    .contact-item{
+      font-size: 0.75rem;
+    }
+  }
+  
+  @media(max-width:646px){
+  .contact{
+     display:none;
+  }
+  }
