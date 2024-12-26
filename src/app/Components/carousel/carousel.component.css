@@ -1,5 +1,5 @@
-.carousel-inner img {
-    height: 500px;
+ .carousel-inner img {
+    height: 300px;
     object-fit: cover;
     border-radius:0px;
   }
@@ -12,7 +12,6 @@
     
   .carousel-control-prev-icon,
   .carousel-control-next-icon {
-    /* background-color: #0879e7; */
     border-radius: 50%;
     padding: 10px;
   }
@@ -27,6 +26,101 @@
   
   .carousel-indicators .active {
     background-color: #ff9800;
+    opacity: 1;
+  }
+   /**/
+
+   .custom-carousel-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    padding: 40px;
+    background: linear-gradient(135deg, #6a1b9a, #8e24aa);
+    border-radius: 20px;
+    color: white;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .left-panel {
+    flex: 1;
+    max-width: 400px;
+  }
+  
+  .left-panel h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .left-panel p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .book-session-btn {
+    background-color: #ff6f61;
+    color: white;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+  }
+  
+  .book-session-btn:hover {
+    background-color: #ff8a80;
+    transform: translateY(-3px);
+  }
+  
+  .right-panel {
+    flex: 2;
+    max-width: 600px;
+  }
+  
+  .custom-carousel {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .carousel-inner img {
+    height: 350px;
+    object-fit: cover;
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .carousel-inner .active img {
+    transform: scale(1.1);
+  }
+  
+  .carousel-caption {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    padding: 10px;
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    padding: 10px;
+  }
+  
+  .carousel-indicators button {
+    background-color: white;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    opacity: 0.7;
+  }
+  
+  .carousel-indicators .active {
+    background-color: #ff6f61;
     opacity: 1;
   }
   
