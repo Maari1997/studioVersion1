@@ -1,11 +1,13 @@
 .services-container {
     text-align: center;
     padding: 40px 20px;
-    background-color: #f9f9f9;
+    /* background-color: #d9dee2; */
+    background: linear-gradient(135deg, rgba(238, 210, 255, 0.9), rgba(153, 235, 255, 0.9));
+
   
     h2 {
       font-size: 2rem;
-      color: #0879e7;
+      color: #ff0f61;
       margin-bottom: 30px;
     }
   }

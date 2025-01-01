@@ -6,10 +6,11 @@ import { ServicesComponent } from '../services/services.component';
 import { ContactComponent } from '../contact/contact.component';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { CommonModule } from '@angular/common';
+import { GalleryComponent } from '../gallery/gallery.component';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderComponent,CarouselComponent,AlbumsComponent,ServicesComponent,ContactComponent,
+  imports: [HeaderComponent,CarouselComponent,GalleryComponent ,AlbumsComponent,ServicesComponent,ContactComponent,
     NavbarComponent,CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'

@@ -1,14 +1,14 @@
-.header {
+
+  .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    /* background-color: #0879e7; */
-    color:#0879e7;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-bottom: 2px solid #ff5722; /* Orange line under the header */
+    padding: 15px 25px;
+    background: linear-gradient(135deg, #ffffff, #f0f5ff);
+    color: #0879e7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #ff0f61;
   }
-   
   
   .logo {
     display: flex;
@@ -16,77 +16,89 @@
   }
   
   .logo-img {
-    height: 70px;
-    margin-right: 25px;
+    height: 60px;
+    margin-right: 20px;
+    border-radius: 10px; /* Adds a rounded effect to the logo */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
   
   .logo-text {
     display: flex;
     align-items: center;
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
   }
   
   .digital-text {
-    color: #135ce6; /* Orange color for "Digital" */  
-    text-transform: uppercase; /* Optional: make it uppercase */
+    color: #135ce6;
+    text-transform: uppercase;
   }
   
   .studio-text {
-    color: #ff5722; /* White color for "Studio" */
-    font-style: italic; /* Optional: make it italic */
-    margin-left: 10px; /* Add spacing between the two words */
+    color: #ff0f61;
+    font-style: italic;
+    margin-left: 8px;
   }
   
   .contact {
     display: flex;
-    gap: 20px;
+    align-items: center;
+    gap: 25px;
   }
   
   .contact-item {
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-size: 0.9rem;
+    gap: 12px;
   }
   
-  .contact-item span{
-    color:black;
-   font-weight: 500;
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.85rem;
   }
   
-  mat-icon {
+  .contact-label {
+    font-weight: 600;
+    font-size: 0.75rem;
+    color: #0879e7;
+  }
+  
+  .contact-item span {
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .rich-icon {
     font-size: 1rem;
-      background-color: #ffbcbc;
-      padding: 4px;
-      border-radius: 50px;
-      color: orangered;
+    /* background: linear-gradient(135deg, #ffe6e6, #ffbcbc); */
+    padding: 4px;
+    border-radius: 50%;   
+    color: #ff0f61;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
   
-  @media(max-width:768px){
-    .contact{
-      display: flex;
-      gap: 10px;
+  @media (max-width: 768px) {
+    .contact {
       flex-direction: column;
+      gap: 15px;
     }
-
-    .mat-icon{
-      font-size: 0.75rem;
-    background-color: #ffbcbc;
-    padding: 6px;
-    border-radius: 50px;
-    color: orangered;
-
+  
+    .contact-item {
+      font-size: 0.9rem;
+      justify-content: center;
     }
-
-    .contact-item{
-      font-size: 0.75rem;
+  
+    .rich-icon {
+      font-size: 1.2rem;
+      padding: 3px;
     }
   }
   
-  @media(max-width:646px){
-  .contact{
-     display:none;
+  @media (max-width: 646px) {
+    .contact {
+      display: none;
+    }
   }
-  }
+  

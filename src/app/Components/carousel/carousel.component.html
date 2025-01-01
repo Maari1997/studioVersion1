@@ -1,93 +1,54 @@
-<!-- <div class="custom-carousel-container">
-    <div id="carouselExample" class="carousel custom-carousel slide w-100" data-bs-ride="carousel" data-bs-interval="7000">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"></button>
-        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1"></button>
-        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2"></button>
+<!-- 
+   
+   <div class="gradient-section">
+    <div class="content">
+      <div class="left-section">
+        <h2>Ready to Capture Your Moments?</h2>
+        <p>Book a session with us to create unforgettable memories.</p>
+        <div class="contact-info">
+          <mat-icon class="phone-icon">phone</mat-icon>
+          <span class="contact-number">+1 (234) 567-890</span>
+        </div>
+        <button mat-raised-button routerLink="/book" color="primary" class="book-btn">Book a Session</button>
+        
       </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img class="d-block w-100" src="assets/images/carousel1.jpg" alt="First slide">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Capture Your Best Moments</h5>
-            <p>Whether it's your wedding day, a family portrait, or a corporate event, our studio offers professional photography services tailored to your needs.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="assets/images/carousel2.jpg" alt="Second slide">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>State-of-the-Art Equipment</h5>
-            <p>We use the latest professional-grade cameras and lighting to ensure every shot is of the highest quality. Our equipment brings your vision to life, every time.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="assets/images/carousel3.jpg" alt="Third slide">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Book Your Session Today!</h5>
-            <p>Ready to create beautiful memories? Contact us today to book your photography session. Our team is ready to help you capture the moments that matter most.</p>
-          </div>
-        </div>
+      <div class="right-section">
+        <swiper-container class="mySwiper" loop="true" navigation="true" speed="1000" pagination="true" autoplay="true" >
+        <swiper-slide class="swiperSlide" *ngFor="let image of images" >
+          <img [src]="image" width="100%" height="300px" alt="carousel image"  />
+        </swiper-slide>
+      </swiper-container>
+      
       </div>
-      <button class="carousel-control-prev" data-bs-target="#carouselExample" type="button" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" data-bs-target="#carouselExample" type="button" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+    </div>
+  </div>  -->
+
+  <div class="gradient-section" data-aos="fade-up">
+    <div class="content">
+      <div class="left-section" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="200">
+        <h2>Ready to Capture Your Moments?</h2>
+        <p>Book a session with us to create unforgettable memories.</p>
+        <div class="contact-info" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
+          <mat-icon class="phone-icon">phone</mat-icon>
+          <span class="contact-number">+1 (234) 567-890</span>
+        </div>
+        <button mat-raised-button routerLink="/book" color="primary" class="book-btn" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="600">Book a Session</button>
+      </div>
+  
+      <div class="right-section" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="800">
+        <swiper-container class="mySwiper" loop="true" navigation="true" speed="1000" pagination="true" autoplay="true">
+          <swiper-slide class="swiperSlide" *ngFor="let image of images" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <img [src]="image" width="100%" height="300px" alt="carousel image" />
+          </swiper-slide>
+        </swiper-container>
+      </div>
     </div>
   </div>
   
-   -->
+ 
+  
 
-   <div class="custom-carousel-section d-flex align-items-center">
-    <div class="left-panel">
-      <h2>Capture Your Memories</h2>
-      <p>Experience professional photography with a personalized touch. Book your session now!</p>
-      <button class="book-session-btn">Book Your Session</button>
-    </div>
-    <div class="right-panel">
-      <div class="custom-carousel-container">
-        <div id="carouselExample" class="carousel custom-carousel slide w-100" data-bs-ride="carousel" data-bs-interval="7000">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"></button>
-            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1"></button>
-            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2"></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img class="d-block w-100" src="assets/images/carousel1.jpg" alt="First slide">
-              <div class="carousel-caption d-none d-md-block">
-                <h5>Capture Your Best Moments</h5>
-                <p>Whether it's your wedding day, a family portrait, or a corporate event, our studio offers professional photography services tailored to your needs.</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img class="d-block w-100" src="assets/images/carousel2.jpg" alt="Second slide">
-              <div class="carousel-caption d-none d-md-block">
-                <h5>State-of-the-Art Equipment</h5>
-                <p>We use the latest professional-grade cameras and lighting to ensure every shot is of the highest quality. Our equipment brings your vision to life, every time.</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img class="d-block w-100" src="assets/images/carousel3.jpg" alt="Third slide">
-              <div class="carousel-caption d-none d-md-block">
-                <h5>Book Your Session Today!</h5>
-                <p>Ready to create beautiful memories? Contact us today to book your photography session. Our team is ready to help you capture the moments that matter most.</p>
-              </div>
-            </div>
-          </div>
-          <button class="carousel-control-prev" data-bs-target="#carouselExample" type="button" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" data-bs-target="#carouselExample" type="button" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
+  
+  
+  
   

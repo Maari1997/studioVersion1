@@ -1,9 +1,12 @@
 .album-container {
     text-align: center;
     padding: 40px 20px;
+    /* background-color: #d9dee2; */
+    background: linear-gradient(135deg, rgba(238, 210, 255, 0.9), rgba(153, 235, 255, 0.9));
+
     h2 {
       font-size: 2rem;
-      color: #0879e7;
+      color: #ff0f61;
       margin-bottom: 30px;
     }
   }
@@ -75,5 +78,20 @@
   
   mat-card-actions button:hover {
     background-color: #065aa3;  
+  }
+  
+  .event-list {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .event-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .event-list li {
+    margin: 5px 0;
   }
   

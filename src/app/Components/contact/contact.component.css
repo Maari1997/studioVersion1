@@ -1,6 +1,6 @@
 .contact-container {
   padding: 40px 20px;
-  background-color: #5d768e; /* Matches your header background color */
+  background: linear-gradient(135deg, rgb(0 3 128 / 90%), rgb(182 130 238 / 90%));
   text-align: center;
 
   h2 {
@@ -35,14 +35,15 @@
 
       mat-icon {
         font-size: 1.5rem;
-        color: #0879e7; /* Theme color for icons */
+        color: #ff0f61; /* Theme color for icons */
         width: 25px!important;
       }
 
       h4 {
         font-size: 1.2rem;
         margin: 0;
-        color: #0879e7; /* Theme color for headings */
+        color: black; /* Theme color for headings */
+        font-weight: 500;
       }
 
       p {
@@ -93,7 +94,7 @@
       width: 100%;
       padding: 10px 15px;
       background-color: #ffffff; /* White background for button */
-      color: #0879e7; /* Theme color for text */
+      color: #ff0f61; /* Theme color for text */
       border: none;
       border-radius: 5px;
       font-size: 1.2rem;
@@ -102,7 +103,7 @@
       transition: background-color 0.3s ease;
 
       &:hover {
-        background-color: #005bb5; /* Darker shade on hover */
+        background-color: #ff0f61; /* Darker shade on hover */
         color: #ffffff; /* White text on hover */
       }
     }
@@ -114,7 +115,7 @@
   bottom: 20px;
   right: 20px;
   background-color: #ffffff; /* White background for scroll button */
-  color: #0879e7; /* Theme color for arrow */
+  color: #ff0f61; /* Theme color for arrow */
   border: none;
   border-radius: 50%;
   width: 50px;
@@ -127,7 +128,7 @@
 }
 
 .scroll-to-top:hover {
-  background-color: #005bb5; /* Darker theme shade on hover */
+  background-color: #ff0f61; /* Darker theme shade on hover */
   color: #ffffff; /* White arrow on hover */
   transform: scale(1.1);
 }

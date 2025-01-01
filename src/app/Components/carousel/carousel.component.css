@@ -1,126 +1,206 @@
- .carousel-inner img {
-    height: 300px;
-    object-fit: cover;
-    border-radius:0px;
-  }
-  
-  .carousel-caption {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 10px 20px;
-    border-radius: 8px;
-  }
-    
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    border-radius: 50%;
-    padding: 10px;
-  }
-  
-  .carousel-indicators button {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: #0879e7;
-    opacity: 0.8;
-  }
-  
-  .carousel-indicators .active {
-    background-color: #ff9800;
-    opacity: 1;
-  }
-   /**/
+/* Gradient background for the section */
+.gradient-section {
+  /* background: linear-gradient(135deg, rgb(49 0 128 / 90%), rgb(130 153 238 / 90%)); */
+  background: linear-gradient(135deg, rgb(0 3 128 / 90%), rgb(182 130 238 / 90%));
+  color: white;
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  box-sizing: border-box;
+}
 
-   .custom-carousel-section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    align-items: center;
-    padding: 40px;
-    background: linear-gradient(135deg, #6a1b9a, #8e24aa);
-    border-radius: 20px;
-    color: white;
-    max-width: 1200px;
-    margin: auto;
-    overflow: hidden;
+/* Content layout with a left and right section */
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Left section */
+.left-section {
+  flex: 1;
+  max-width: 500px;
+  text-align: left;
+}
+
+.left-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+  line-height: 3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.left-section p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #fff; /* Adjust color */
+}
+
+.phone-icon {
+  font-size: 30px;
+  margin-right: 10px;
+  color: #ff4081; /* You can change this to any color */
+}
+
+.contact-number {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.mat-icon{
+  height: 27px!important;
+}
+.book-btn {
+  background-color: #ff0f61; /* Bright pink color */
+  color: white;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 25px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.book-btn:hover {
+  background-color: #e91e63; /* Darker pink on hover */
+  transform: translateY(-3px);
+}
+
+.book-btn:active {
+  transform: translateY(0);
+}
+
+/* Right section for the carousel */
+.right-section {
+  flex: 2;
+  width:80%;
+  max-width: 800px;
+}
+
+/* Swiper styles */
+.mySwiper {
+  width: 100%;
+  height: 350px; /* Adjust the carousel height */
+  border-radius: 25px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Swiper slide styling */
+.swiperSlide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* border-radius: 10px; */
+  transition: transform 0.3s ease;
+}
+
+.swiperSlide:hover img {
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Add custom navigation buttons */
+.swiper-button-next, .swiper-button-prev {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  padding: 10px;
+  color: #ff4081;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  height: 30px;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+  background-color: #ff4081;
+  color: white;
+}
+
+/* Pagination style */
+.swiper-pagination-bullet {
+  background-color: #ff4081;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #e91e63;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    text-align: center;
   }
-  
-  .left-panel {
-    flex: 1;
-    max-width: 400px;
+
+  .left-section {
+    margin-bottom: 10px;
   }
-  
-  .left-panel h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 15px;
+
+  .right-section {
+    width: 100%;
   }
-  
-  .left-panel p {
+
+  .swiperSlide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  .left-section p{
     font-size: 1.2rem;
-    margin-bottom: 20px;
+    line-height: 1.5;
+    margin-bottom: 0;
+    margin-top: 2rem;
   }
-  
-  .book-session-btn {
-    background-color: #ff6f61;
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0px;
+    max-width: 1200px;
+    width: 100%;
+  }
+
+  .gradient-section {
+    background: linear-gradient(135deg, rgb(49 0 128 / 90%), rgb(130 153 238 / 90%));
     color: white;
-    padding: 12px 24px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: transform 0.2s, background-color 0.3s;
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
   }
-  
-  .book-session-btn:hover {
-    background-color: #ff8a80;
-    transform: translateY(-3px);
-  }
-  
-  .right-panel {
-    flex: 2;
-    max-width: 600px;
-  }
-  
-  .custom-carousel {
+
+  .mySwiper {
+    width: 100%;
+    height: 150px; /* Adjust the carousel height */
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
   }
   
-  .carousel-inner img {
-    height: 350px;
-    object-fit: cover;
-    width: 100%;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .carousel-inner .active img {
-    transform: scale(1.1);
-  }
-  
-  .carousel-caption {
-    background: rgba(0, 0, 0, 0.6);
-    border-radius: 8px;
-    padding: 10px;
-  }
-  
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 50%;
-    padding: 10px;
-  }
-  
-  .carousel-indicators button {
-    background-color: white;
-    border-radius: 50%;
-    width: 12px;
-    height: 12px;
-    opacity: 0.7;
-  }
-  
-  .carousel-indicators .active {
-    background-color: #ff6f61;
-    opacity: 1;
-  }
-  
+}
+
+
+

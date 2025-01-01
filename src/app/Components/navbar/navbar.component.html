@@ -1,26 +1,28 @@
 
 <nav class="navbar">
   <div class="navbar-container">
-    <!-- Hamburger Menu Button (Mobile) -->
+    
     <button class="menu-toggle" *ngIf="isMobileView" (click)="toggleMenu()">☰</button>
 
-    <!-- Navbar Content -->
     <div
       class="navbar-content"
       [ngClass]="{ 'mobile-menu-open': isMobileMenuOpen, 'desktop-menu': !isMobileView }"
     >
       <div class="navbar-left">
         <button (click)="scrollTo('carousel')">Home</button>
+        <button (click)="scrollTo('gallery')">Gallery</button>
         <button (click)="scrollTo('services')">Services</button>
-        <button (click)="scrollTo('albums')">Albums</button>
-        <button (click)="scrollTo('contact')">Contact</button>
-        <button routerLink="/book">Book</button>
+        <button (click)="scrollTo('albums')">Events</button>
+        <button (click)="scrollTo('contact')">Contact</button>        
       </div>
       
     </div>
     <div class="navbar-right">
-      <button class="sign-in-btn" routerLink="/signin">Sign In</button>
+      <div class="profile-icon" routerLink="/signin" title="Sign In">
+        <mat-icon>person</mat-icon>
+      </div>
     </div>
   </div>
 </nav>
-
+ 
+ 
