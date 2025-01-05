@@ -1,21 +1,38 @@
+<div class="services-container" data-aos="fade-up" data-aos-duration="200">
+  <h2 data-aos="fade-down" data-aos-delay="300">Our Services</h2>
+  <div class="services-grid">
+    <mat-card 
+      *ngFor="let service of services; let i = index" 
+      class="service-card" 
+      data-aos="fade-up" 
+      [attr.data-aos-delay]="400 + (i * 200)" 
+      data-aos-duration="800">
 
-   <div class="services-container" data-aos="fade-up" data-aos-delay="100">
-    <h2 data-aos="fade-down" data-aos-delay="200">Our Services</h2>
-    <div class="services-grid">
-      <div 
-        class="service-card" 
-        *ngFor="let service of services; let i = index" 
+      <!-- Service Image -->
+      <img 
+        mat-card-image 
+        [src]="service.image" 
+        [alt]="service.title" 
+        loading="lazy" 
+        class="service-image" 
         data-aos="zoom-in" 
-        [attr.data-aos-delay]="400 + (i * 100)">
-        <img 
-          [src]="service.image" 
-          [alt]="service.title" 
-          class="service-image" 
-          data-aos="zoom-in-up" 
-          [attr.data-aos-delay]="500 + (i * 100)" />
-        <h3 data-aos="fade-up" [attr.data-aos-delay]="600 + (i * 100)">{{ service.title }}</h3>
-        <p data-aos="fade-left" [attr.data-aos-delay]="700 + (i * 100)">{{ service.description }}</p>
-      </div>
-    </div>
+        [attr.data-aos-delay]="500 + (i * 200)"
+      />
+
+      <!-- Service Title -->
+      <mat-card-title 
+        data-aos="fade-up" 
+        [attr.data-aos-delay]="600 + (i * 200)">
+        {{ service.title }}
+      </mat-card-title>
+
+      <!-- Service Description -->
+      <mat-card-content 
+        data-aos="fade-up" 
+        [attr.data-aos-delay]="700 + (i * 200)">
+        <p>{{ service.description }}</p>
+      </mat-card-content>
+
+    </mat-card>
   </div>
-  
+</div>

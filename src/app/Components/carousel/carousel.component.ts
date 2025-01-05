@@ -13,9 +13,14 @@ import { RouterLink } from '@angular/router';
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class CarouselComponent {
+  // images = [
+  //   'assets/images/carousel1.jpg',
+  //   'assets/images/carousel2.jpg',
+  //   'assets/images/carousel3.jpg',
+  // ];
   images = [
-    'assets/images/carousel1.jpg',
-    'assets/images/carousel2.jpg',
-    'assets/images/carousel3.jpg',
+    'assets/images/carousel1.webp',
+    'assets/images/carousel2.webp',
+    'assets/images/carousel3.webp',
   ];
 }
