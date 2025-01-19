@@ -1,35 +1,28 @@
-<div class="services-container" data-aos="fade-up" data-aos-duration="200">
-  <h2 data-aos="fade-down" data-aos-delay="300">Our Services</h2>
+<div class="services-container">
+  <h2>Our Services</h2>
   <div class="services-grid">
     <mat-card 
       *ngFor="let service of services; let i = index" 
       class="service-card" 
       data-aos="fade-up" 
-      [attr.data-aos-delay]="400 + (i * 200)" 
-      data-aos-duration="800">
+      [attr.data-aos-delay]="i * 100" 
+      data-aos-duration="200">
 
-      <!-- Service Image -->
+      <!-- Optimized Service Image -->
       <img 
         mat-card-image 
-        [src]="service.image" 
-        [alt]="service.title" 
-        loading="lazy" 
-        class="service-image" 
-        data-aos="zoom-in" 
-        [attr.data-aos-delay]="500 + (i * 200)"
-      />
+        [lazyLoad]="service.image" 
+        [defaultImage]=""
+        [alt]="service.title"         
+        class="service-image" />
 
       <!-- Service Title -->
-      <mat-card-title 
-        data-aos="fade-up" 
-        [attr.data-aos-delay]="600 + (i * 200)">
+      <mat-card-title>
         {{ service.title }}
       </mat-card-title>
 
       <!-- Service Description -->
-      <mat-card-content 
-        data-aos="fade-up" 
-        [attr.data-aos-delay]="700 + (i * 200)">
+      <mat-card-content>
         <p>{{ service.description }}</p>
       </mat-card-content>
 

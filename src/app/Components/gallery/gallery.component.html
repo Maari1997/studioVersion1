@@ -15,34 +15,9 @@
       coverflow-effect-modifier="1" 
       coverflow-effect-slide-shadows="true" 
       loop="true">
-      
-      <swiper-slide>
-        <img src="https://swiperjs.com/demos/images/nature-1.jpg" alt="Nature 1" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="https://swiperjs.com/demos/images/nature-2.jpg" alt="Nature 2" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="https://swiperjs.com/demos/images/nature-3.jpg" alt="Nature 3" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="https://swiperjs.com/demos/images/nature-4.jpg" alt="Nature 4" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="https://swiperjs.com/demos/images/nature-5.jpg" alt="Nature 5" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="https://swiperjs.com/demos/images/nature-6.jpg" alt="Nature 6" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="https://swiperjs.com/demos/images/nature-7.jpg" alt="Nature 7" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="https://swiperjs.com/demos/images/nature-8.jpg" alt="Nature 8" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="https://swiperjs.com/demos/images/nature-9.jpg" alt="Nature 9" />
-      </swiper-slide>
+      <swiper-slide *ngFor="let slide of slides">
+        <img [lazyLoad]="slide.image" [defaultImage]="" [alt]="slide.alt" />
+      </swiper-slide>      
     </swiper-container>
   </div>
 </div>

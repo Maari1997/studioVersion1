@@ -2,57 +2,100 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatIcon } from '@angular/material/icon';
+import {LazyLoadImageModule} from 'ng-lazyload-image'
 @Component({
   selector: 'app-services',
   standalone: true,
-  imports: [MatIcon,CommonModule,MatCardModule],
+  imports: [MatIcon,CommonModule,MatCardModule,LazyLoadImageModule],
   templateUrl: './services.component.html',
   styleUrls: ['./services.component.css']
 })
 export class ServicesComponent implements OnInit {
-  services:any[]=[];
-ngOnInit(): void {
-  this.services = [
+  // services:any[]=[];
+  services = [
     {
       title: 'Flex Design',
-      image: 'assets/images/flexdesign.webp',     
+      image: 'assets/images/flexdesign.jpg',     
       description: 'Custom-designed flex banners to make your events shine.'
     },
     {
       title: 'Album Design',
-      image: 'assets/images/album.webp', 
+      image: 'assets/images/album.jpg',
       description: 'Creative and personalized album designs for every occasion.'
     },
     {
       title: 'Outdoor Shoot',
-      image: 'assets/images/outdoor.webp', 
+      image: 'assets/images/outdoor.jpg',
       description: 'Capture memories with stunning outdoor photography sessions.'
     },
     {
       title: 'Visiting Card Design',
-      image: 'assets/images/visitingcard.webp', 
+      image: 'assets/images/visitingcard.jpg', 
       description: 'Professional and eye-catching visiting card designs.'
     },
     {
       title: 'Photo Frame',
-      image: 'assets/images/photoframe.webp', 
+      image: 'assets/images/photoframe.jpg', 
       description: 'Beautifully crafted photo frames for your cherished pictures.'
     },
     {
       title: 'Wedding Ceremony',
-      image: 'assets/images/wedding.webp', 
+      image: 'assets/images/wedding.jpg',
       description: 'Exceptional photography for your special wedding moments.'
     },
     {
       title: 'Photo Frame',
-      image: 'assets/images/photoframe.webp', 
+      image: 'assets/images/photoframe.jpg',
       description: 'Beautifully crafted photo frames for your cherished pictures.'
     },
     {
       title: 'Wedding Ceremony',
-      image: 'assets/images/wedding.webp', 
+      image: 'assets/images/wedding.jpg', 
       description: 'Exceptional photography for your special wedding moments.'
     }
   ];
+ngOnInit(): void {
+  // this.services = [
+  //   {
+  //     title: 'Flex Design',
+  //     image: 'assets/images/flexdesign.jpg',     
+  //     description: 'Custom-designed flex banners to make your events shine.'
+  //   },
+  //   {
+  //     title: 'Album Design',
+  //     image: 'assets/images/album.jpg',
+  //     description: 'Creative and personalized album designs for every occasion.'
+  //   },
+  //   {
+  //     title: 'Outdoor Shoot',
+  //     image: 'assets/images/outdoor.jpg',
+  //     description: 'Capture memories with stunning outdoor photography sessions.'
+  //   },
+  //   {
+  //     title: 'Visiting Card Design',
+  //     image: 'assets/images/visitingcard.jpg', 
+  //     description: 'Professional and eye-catching visiting card designs.'
+  //   },
+  //   {
+  //     title: 'Photo Frame',
+  //     image: 'assets/images/photoframe.jpg', 
+  //     description: 'Beautifully crafted photo frames for your cherished pictures.'
+  //   },
+  //   {
+  //     title: 'Wedding Ceremony',
+  //     image: 'assets/images/wedding.jpg',
+  //     description: 'Exceptional photography for your special wedding moments.'
+  //   },
+  //   {
+  //     title: 'Photo Frame',
+  //     image: 'assets/images/photoframe.jpg',
+  //     description: 'Beautifully crafted photo frames for your cherished pictures.'
+  //   },
+  //   {
+  //     title: 'Wedding Ceremony',
+  //     image: 'assets/images/wedding.jpg', 
+  //     description: 'Exceptional photography for your special wedding moments.'
+  //   }
+  // ];
 }
 }
