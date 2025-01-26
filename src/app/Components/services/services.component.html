@@ -1,31 +1,36 @@
-<div class="services-container">
-  <h2>Our Services</h2>
+<div class="services-container" data-aos="fade-up" data-aos-delay="200">
+  <h2 data-aos="fade-down" data-aos-delay="300">Our Premium Services</h2>
   <div class="services-grid">
-    <mat-card 
-      *ngFor="let service of services; let i = index" 
+    <div 
       class="service-card" 
+      *ngFor="let service of services; let i = index"
       data-aos="fade-up" 
-      [attr.data-aos-delay]="i * 100" 
-      data-aos-duration="200">
+      [attr.data-aos-delay]="i * 100"
+      data-aos-duration="400"
+    >
+      <!-- Image Section -->
+      <div class="service-image-wrapper">
+        <img 
+          [lazyLoad]="service.image" 
+          [defaultImage]="'assets/images/default.png'"
+          [alt]="service.title" 
+          class="service-image"
+        />
+        <div class="image-overlay">
+          <span class="service-highlight">{{ service.highlight }}</span>
+        </div>
+      </div>
 
-      <!-- Optimized Service Image -->
-      <img 
-        mat-card-image 
-        [lazyLoad]="service.image" 
-        [defaultImage]=""
-        [alt]="service.title"         
-        class="service-image" />
+      <!-- Text Section -->
+      <div class="service-details">
+        <h3 class="service-title">{{ service.title }}</h3>
+        <p class="service-description">{{ service.description }}</p>
+      </div>
 
-      <!-- Service Title -->
-      <mat-card-title>
-        {{ service.title }}
-      </mat-card-title>
-
-      <!-- Service Description -->
-      <mat-card-content>
-        <p>{{ service.description }}</p>
-      </mat-card-content>
-
-    </mat-card>
+      <!-- Action Section -->
+      <div class="service-actions">
+        <button class="service-button">Explore More</button>
+      </div>
+    </div>
   </div>
 </div>

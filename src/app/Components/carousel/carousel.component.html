@@ -12,22 +12,59 @@
       </div>
   
       <div class="right-section" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="800">
-        <swiper-container class="mySwiper" loop="true" navigation="true" speed="1000" pagination="true" autoplay="true">
-          <swiper-slide class="swiperSlide" *ngFor="let image of images" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+        <!-- Main Swiper Container -->
+        <swiper-container 
+          class="mySwiper" 
+          loop="true" 
+          navigation="true" 
+          speed="1000" 
+          pagination="true" 
+          autoplay="true" 
+          thumbs-swiper="mySwiper2" 
+          style="width: 100%; border-radius: 10px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);">
+          
+          <swiper-slide 
+            class="swiperSlide" 
+            *ngFor="let image of images" 
+            data-aos="fade-up" 
+            data-aos-duration="1000" 
+            data-aos-delay="200" 
+            style="display: flex; justify-content: center; align-items: center;">
+            
             <img 
-            [lazyLoad]="image" 
-            [defaultImage]=""
-            alt="carousel image" />
+              [lazyLoad]="image" 
+              [defaultImage]="'assets/images/default1.png'" 
+              alt="carousel image" 
+              style="width: 100%; height: auto; object-fit: cover; border-radius: 10px;" />
+          </swiper-slide>
+        </swiper-container>
+      
+        <!-- Thumbnail Swiper Container -->
+        <swiper-container 
+          class="mySwiper2" 
+          loop="true" 
+          space-between="10" 
+          slides-per-view="4" 
+          free-mode="true" 
+          auto-play="true"
+          watch-slides-progress="true" 
+          style="width: 100%; height:100px; margin-top: 10px; box-sizing: border-box;">
+          
+          <swiper-slide 
+            class="swiperSlide" 
+            *ngFor="let image of images" 
+            style="display: flex; justify-content: center; align-items: center; opacity: 0.5;">
+            
+            <img 
+              [lazyLoad]="image" 
+              [defaultImage]="'/assets/default-placeholder.png'" 
+              alt="thumbnail image" 
+              style="height: auto; object-fit: cover; border-radius: 5px;" />
           </swiper-slide>
         </swiper-container>
       </div>
+      
     </div>
   </div>
-  
- 
-  
-
-  
-  
   
   

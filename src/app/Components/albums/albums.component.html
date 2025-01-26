@@ -1,41 +1,30 @@
-<div class="album-container">
-  <h2>Our Events</h2>
-  <div class="album-list">
-    <mat-card 
-      *ngFor="let album of albums; let i = index" 
-      class="album-card">
-      
-      <mat-card-header>
-        <mat-card-title>
-          {{ album.title }}
-        </mat-card-title>
-      </mat-card-header>
-
-      <mat-card-content>
-        <!-- Optimized Album Cover Image -->
-        <img
-          mat-card-image
-          [lazyLoad]="album.coverImage"
-           [defaultImage]=""
-          alt="album image"
-          class="album-image"
-          
+<div class="event-section" data-aos="fade-up" data-aos-delay="200">
+  <h2 class="section-title" data-aos="fade-down" data-aos-delay="300">Our Events</h2>
+  <div class="event-grid">
+    <div *ngFor="let album of albums" class="event-card">
+      <!-- Cover Image -->
+      <div class="event-image-container">
+        <img 
+          [lazyLoad]="album.coverImage" 
+          [defaultImage]="'assets/images/default.png'"
+          alt="event cover" 
+          class="event-image" 
         />
-
-        <!-- Album Description -->
-        <p>
-          {{ album.description }}
-        </p>
-
-        <!-- Event List -->
-        <div class="event-list">
-          <ul>
-            <li *ngFor="let event of album.events">
-              {{ event }}
-            </li>
-          </ul>
+        <div class="event-image-overlay">
+          <p>{{ album.title }}</p>
         </div>
-      </mat-card-content>
-    </mat-card>
+      </div>
+
+      <!-- Event Details -->
+      <div class="event-details">
+        <h3>{{ album.title }}</h3>
+        <p>{{ album.description }}</p>
+        <ul>
+          <li *ngFor="let event of album.events">
+            <i class="icon-dot"></i> {{ event }}
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>

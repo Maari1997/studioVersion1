@@ -24,16 +24,5 @@ export class GalleryComponent implements OnInit {
     { image: 'assets/images/album1.jpg', alt: 'Nature 9' }
   ];
 ngOnInit(): void {
-  // this. slides = [
-  //   { image: 'assets/images/album1.jpg', alt: 'Nature 1' },
-  //   { image: 'assets/images/album2.jpg', alt: 'Nature 2' },
-  //   { image: 'assets/images/album1.jpg', alt: 'Nature 3' },
-  //   { image: 'assets/images/album2.jpg', alt: 'Nature 4' },
-  //   { image: 'assets/images/album1.jpg', alt: 'Nature 5' },
-  //   { image: 'assets/images/album2.jpg', alt: 'Nature 6' },
-  //   { image: 'assets/images/album1.jpg', alt: 'Nature 7' },
-  //   { image: 'assets/images/album2.jpg', alt: 'Nature 8' },
-  //   { image: 'assets/images/album1.jpg', alt: 'Nature 9' }
-  // ];
 }
 }

@@ -1,17 +1,16 @@
-/* Gradient background for the section */
 .gradient-section {
-  /* background: linear-gradient(135deg, rgb(49 0 128 / 90%), rgb(130 153 238 / 90%)); */
   background: linear-gradient(135deg, rgb(0 3 128 / 90%), rgb(182 130 238 / 90%));
+  /* background: url(/assets/images/bg_camera.jpg);
+  background-repeat: no-repeat;
+  object-fit: cover; */
   color: white;
-  padding: 100px 20px;
+  padding: 50px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* height: 500px; */
   box-sizing: border-box;
 }
 
-/* Content layout with a left and right section */
 .content {
   display: flex;
   justify-content: space-between;
@@ -23,7 +22,6 @@
   flex-grow: inherit;
 }
 
-/* Left section */
 .left-section {
   flex: 1;
   max-width: 500px;
@@ -50,13 +48,13 @@
   align-items: center;
   margin-top: 20px;
   font-size: 18px;
-  color: #fff; /* Adjust color */
+  color: #fff; 
 }
 
 .phone-icon {
   font-size: 30px;
   margin-right: 10px;
-  color: #ff4081; /* You can change this to any color */
+  color: #ff4081; 
 }
 
 .contact-number {
@@ -68,7 +66,7 @@
   height: 27px!important;
 }
 .book-btn {
-  background-color: #ff0f61; /* Bright pink color */
+  background-color: #ff0f61; 
   color: white;
   padding: 12px 24px;
   font-size: 1rem;
@@ -81,7 +79,7 @@
 }
 
 .book-btn:hover {
-  background-color: #e91e63; /* Darker pink on hover */
+  background-color: #e91e63; 
   transform: translateY(-3px);
 }
 
@@ -89,41 +87,35 @@
   transform: translateY(0);
 }
 
-/* Right section for the carousel */
 .right-section {
   flex: 2;
   width:100%;
   max-width: 800px;
 }
 
-/* Swiper styles */
 .mySwiper {
   width: 100%;
-  height: 350px; /* Adjust the carousel height */
+  height: 300px;
   border-radius: 25px;
-  /* border-top-right-radius: 0;
-  border-bottom-left-radius: 0; */
   overflow: hidden;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
 .swiperSlide{
-  width: 100%;
+  width: 100%!important;
 }
-/* Swiper slide styling */
+
 .swiperSlide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* border-radius: 10px; */
   transition: transform 0.3s ease;
 }
 
 .swiperSlide:hover img {
-  transform: scale(1.05); /* Slight zoom effect */
+  transform: scale(1.05); 
 }
 
-/* Add custom navigation buttons */
 .swiper-button-next, .swiper-button-prev {
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 50%;
@@ -139,7 +131,7 @@
   color: white;
 }
 
-/* Pagination style */
+
 .swiper-pagination-bullet {
   background-color: #ff4081;
   opacity: 1 !important;
@@ -149,8 +141,6 @@
   background-color: #e91e63;
 }
 
-
-/* Responsive layout */
 @media (max-width: 768px) {
   .content {
     flex-direction: column;
@@ -168,9 +158,11 @@
   .right-section {
     width: 100%!important;
   }
-
+  .swiperSlide{
+    width: 100%!important;
+  }
   .swiperSlide img {
-    width: 100%;
+    width: 100%!important;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
@@ -194,10 +186,41 @@
   }
 
   .mySwiper {
-    width: 100%;    
+    display: none;
   } 
+  .mySwiper2 swiper-slide {
+    width: 20%!important;
+    opacity: 1 !important;
+    cursor: pointer;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
   
 }
 
+.mySwiper2 {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 5px 0;
+  background: #f8f8f8;
+}
+
+.mySwiper2 swiper-slide {
+  width: 20%!important;
+  opacity: 1 !important;
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+/* 
+.mySwiper2 swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+} */
 
 
+.mySwiper2 .swiper-slide-thumb-active {
+  opacity: 1;
+  transform: scale(1.1);
+  border: 2px solid #007aff;
+}

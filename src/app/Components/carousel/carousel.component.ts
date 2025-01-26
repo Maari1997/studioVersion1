@@ -4,6 +4,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { RouterLink } from '@angular/router';
 import {LazyLoadImageModule} from 'ng-lazyload-image'
 
+
 @Component({
   selector: 'app-carousel',
   standalone: true,
@@ -16,6 +17,9 @@ export class CarouselComponent {
   images = [
     'assets/images/carousel1.jpg',
     'assets/images/carousel2.jpg',
-    'assets/images/carousel3.jpg',
+    'assets/images/carousel3.jpg',  
+    'assets/images/carousel2.jpg',
+    'assets/images/carousel3.jpg',  
+    'assets/images/carousel2.jpg'
   ];  
 }
