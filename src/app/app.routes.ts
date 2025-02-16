@@ -10,5 +10,8 @@ export const routes: Routes = [
     ,
     {
         path:'book',loadComponent:()=>import('./Components/booking/booking.component').then((m)=>m.BookingComponent)
+    },
+    {
+        path:'admindashboard',loadComponent:()=>import('./Components/admindashboard/admindashboard.component').then((m)=>m.AdmindashboardComponent)
     }
 ];

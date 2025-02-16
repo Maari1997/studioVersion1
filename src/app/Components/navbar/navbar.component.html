@@ -19,12 +19,21 @@
       </div>
       
     </div>
-    <div class="navbar-right">
-      <div class="profile-icon" routerLink="/signin" title="Sign In">
-        <mat-icon>person</mat-icon>
-      </div>
+    <div class="navbar-right">      
+      <button
+      mat-raised-button
+      class="sign-in-button"
+      (click)="openSignInPopup()"
+      title="Sign In"
+      aria-label="Sign In">
+      <!-- <mat-icon class="icon">person</mat-icon> -->
+      <span class="text">Sign In</span>
+    </button>
     </div>
   </div>
 </nav>
  
+<app-sign-in-popup *ngIf="showSignInPopup"
+(closePopup)="closeSignInPopup()">
+</app-sign-in-popup>
  

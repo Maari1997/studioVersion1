@@ -3,6 +3,7 @@
   /* background: url(/assets/images/bg_camera.jpg);
   background-repeat: no-repeat;
   object-fit: cover; */
+  height: 500px;
   color: white;
   padding: 50px 20px;
   display: flex;
@@ -87,10 +88,55 @@
   transform: translateY(0);
 }
 
-.right-section {
+/* .right-section {
   flex: 2;
   width:100%;
   max-width: 800px;
+} */
+
+.right-section {
+  flex: 2;
+  width: 100%;
+  max-width: 800px;
+  position: relative; /* Required for pseudo-elements */
+  perspective: 1200px; /* Adds depth for 3D effect */
+  transform-style: preserve-3d; /* Ensures child elements are rendered in 3D space */
+}
+
+.right-section::before,
+.right-section::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1); /* Shadow color */
+  border-radius: 15px; /* Match the border-radius of the container */
+  z-index: -1; /* Place the shadow behind the container */
+  transform: translateZ(-20px); /* Push the shadow back in 3D space */
+  filter: blur(15px); /* Blur the shadow for a softer effect */
+}
+
+.right-section::after {
+  top: 20px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.05); /* Lighter shadow for a layered effect */
+  transform: translateZ(-40px); /* Push the second shadow further back */
+  filter: blur(25px); /* Increase blur for the second shadow */
+}
+
+.right-section {
+  background: #fff; /* Background color of the container */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); /* Base shadow for the container */
+  transform: translateZ(0); /* Ensure the container is in 3D space */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transitions */
+}
+
+.right-section:hover {
+  transform: translateZ(20px); /* Lift the container on hover */
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
 }
 
 .mySwiper {
@@ -188,39 +234,6 @@
   .mySwiper {
     display: none;
   } 
-  .mySwiper2 swiper-slide {
-    width: 20%!important;
-    opacity: 1 !important;
-    cursor: pointer;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
   
 }
 
-.mySwiper2 {
-  height: 20%;
-  box-sizing: border-box;
-  padding: 5px 0;
-  background: #f8f8f8;
-}
-
-.mySwiper2 swiper-slide {
-  width: 20%!important;
-  opacity: 1 !important;
-  cursor: pointer;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-/* 
-.mySwiper2 swiper-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-} */
-
-
-.mySwiper2 .swiper-slide-thumb-active {
-  opacity: 1;
-  transform: scale(1.1);
-  border: 2px solid #007aff;
-}

@@ -102,3 +102,28 @@
     }
   }
   
+  .sign-in-button {
+    display: flex;
+    align-items: center;
+    gap: 8px!important; /* Space between icon and text */
+    padding: 10px 20px!important; /* Padding for button */
+    font-size: 16px!important; /* Text size */
+    font-weight: 500!important; /* Medium font weight */
+    color: #fff!important; /* Text color */
+    background: linear-gradient(145deg, hsl(340, 100%, 50%), hsl(271, 100%, 35%))!important; /* Gradient background */
+    border: none!important; /* Remove default border */
+    border-radius: 20px!important; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(5, 5, 5, 0.1)!important; /* Subtle shadow */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease!important; /* Smooth transitions */
+  }
+  
+  .sign-in-button:hover {
+    background: linear-gradient(145deg,  hsl(340, 100%, 50%), hsl(271, 100%, 35%)); /* Reverse gradient on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+  }
+  
+  .sign-in-button:active {
+    transform: translateY(0); /* Reset lift on click */
+  }

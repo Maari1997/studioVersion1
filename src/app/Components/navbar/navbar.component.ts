@@ -3,17 +3,19 @@ import { Component,HostListener } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterLink } from '@angular/router';
+import { SignInPopupComponent } from '../../Subcomponents/sign-in-popup/sign-in-popup.component';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [MatButtonModule,RouterLink,CommonModule,MatIconModule],
+  imports: [MatButtonModule,RouterLink,CommonModule,MatIconModule,SignInPopupComponent],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
   isMobileMenuOpen = false; // Tracks mobile menu state
   isMobileView = false; // Tracks whether the screen size is mobile
+  showSignInPopup: boolean = false;
 
   constructor() {
     this.checkViewport(); // Check viewport size on component initialization
@@ -47,4 +49,15 @@ export class NavbarComponent {
       this.isMobileMenuOpen = false; // Close menu on selection
     }
   }
+
+  // Open the sign-in popup
+  openSignInPopup() {
+    this.showSignInPopup = true;
+  }
+
+  // Close the sign-in popup
+  closeSignInPopup() {
+    this.showSignInPopup = false;
+  }
+  
 }

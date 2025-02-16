@@ -7,21 +7,29 @@
         <span class="studio-text">Studio</span>
       </span>
     </div>
-    <div class="contact">
-      <div class="contact-item">
+    <div class="contact" >
+      <div class="contact-item" *ngIf="!isLoggedIn">
         <mat-icon class="rich-icon">call</mat-icon>
         <div class="contact-details">
           <span class="contact-label">Call Us:</span>
           <span>9989989984</span>
         </div>
       </div>
-      <div class="contact-item">
+      <div class="contact-item" *ngIf="!isLoggedIn">
         <mat-icon class="rich-icon">mail</mat-icon>
         <div class="contact-details">
           <span class="contact-label">Email:</span>
           <span>contact&#64;photostudio.com</span>
         </div>
       </div>
+      <button *ngIf="isLoggedIn"
+      mat-raised-button
+      class="sign-in-button"
+      (click)="LogOut()"
+      title="LogOut"
+      aria-label="LogOut">
+      <span class="text">Log Out</span>
+    </button>
     </div>
   </header>
   

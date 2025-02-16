@@ -150,30 +150,7 @@
     }
     
   }
-    
-  
-  .profile-icon {
-    background: #ff0f61;
-    padding: 5px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .profile-icon mat-icon {
-    color: white;
-    font-size: 1.4rem;
-  }
-  
-  .profile-icon:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  }
-  
+   
   
   /* Stylish Menu Icon */
 .menu-toggle {
@@ -230,4 +207,41 @@
 .menu-icon.open::after {
   transform: rotate(-45deg);
   top: 0;
+}
+
+/*Sign In button*/
+.sign-in-button {
+  display: flex;
+  align-items: center;
+  gap: 8px!important; /* Space between icon and text */
+  padding: 10px 20px!important; /* Padding for button */
+  font-size: 16px!important; /* Text size */
+  font-weight: 500!important; /* Medium font weight */
+  color: #fff!important; /* Text color */
+  background: linear-gradient(145deg, #007bff, #0056b3)!important; /* Gradient background */
+  border: none!important; /* Remove default border */
+  border-radius: 20px!important; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(5, 5, 5, 0.1)!important; /* Subtle shadow */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: all 0.3s ease!important; /* Smooth transitions */
+}
+
+.sign-in-button:hover {
+  background: linear-gradient(145deg, #0056b3, #007bff); /* Reverse gradient on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.sign-in-button:active {
+  transform: translateY(0); /* Reset lift on click */
+}
+
+.icon {
+  font-size: 20px; /* Icon size */
+  height: 20px; /* Match icon height */
+  width: 20px; /* Match icon width */
+}
+
+.text {
+  font-family: 'Roboto', sans-serif; /* Use a modern font */
 }
