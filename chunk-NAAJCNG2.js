@@ -1,0 +1,1 @@
+import{ca as n,fb as t,gb as i,nb as a,ub as p}from"./chunk-5TGPBYP2.js";var s=class o{static \u0275fac=function(e){return new(e||o)};static \u0275cmp=n({type:o,selectors:[["app-booking"]],standalone:!0,features:[p],decls:2,vars:0,template:function(e,r){e&1&&(t(0,"p"),a(1,"booking works!"),i())}})};export{s as BookingComponent};
