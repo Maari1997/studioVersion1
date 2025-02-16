@@ -71,8 +71,7 @@
   }
   
   .rich-icon {
-    font-size: 1rem;
-    /* background: linear-gradient(135deg, #ffe6e6, #ffbcbc); */
+    font-size: 1rem;    
     padding: 4px;
     border-radius: 50%;   
     color: #ff0f61;
